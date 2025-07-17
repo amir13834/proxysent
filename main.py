@@ -9,18 +9,14 @@ API_HASH = 'cba32691d5804bc435725c6ce0a3c27c'
 SOURCE_CHANNEL_ID = '@MTP_roto'
 DESTINATION_CHANNEL_ID = '@proxy1321'
 
-SCHEDULED_TIMES = ["09:00", "13:30", "18:00", "22:00"]
-
-# PROXY = {
-#     'proxy_type': 'socks5',
-#     'addr': '127.0.0.1',
-#     'port': 10808
-# }
+SCHEDULED_TIMES = ["00:30","09:30", "10:30", "11:30", "12:30", "13:30", "14:30",
+                   "15:30", "16:30", "17:30", "18:30", "19:30", "20:30",
+                   "21:30", "22:30", "23:30"]
 
 SESSION_NAME = 'my_telegram_account'
 
 lock = asyncio.Lock()
-
+print(" منطقه زمانی سیستم:", time.tzname)
 
 async def forward_last_message(client):
     async with lock:
@@ -53,7 +49,6 @@ async def scheduler():
         print("کلاینت تلگرام متصل شد.")
         print("شروع برنامه‌ریزی...")
 
-        # اجرای یک‌باره در شروع برنامه
         print("\n[شروع برنامه] اجرای فوری عملیات فوروارد...")
         await forward_last_message(client)
 
@@ -63,7 +58,7 @@ async def scheduler():
             if now in SCHEDULED_TIMES:
                 print(f"\n[{now}] زمان‌بندی رسید، اجرای وظیفه...")
                 await forward_last_message(client)
-                await asyncio.sleep(60)  # جلوگیری از اجرای دوباره در همان دقیقه
+                await asyncio.sleep(60)  
 
             await asyncio.sleep(1)
 
