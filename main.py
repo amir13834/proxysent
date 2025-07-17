@@ -53,6 +53,10 @@ async def scheduler():
         print("کلاینت تلگرام متصل شد.")
         print("شروع برنامه‌ریزی...")
 
+        # اجرای یک‌باره در شروع برنامه
+        print("\n[شروع برنامه] اجرای فوری عملیات فوروارد...")
+        await forward_last_message(client)
+
         while True:
             now = datetime.datetime.now().strftime("%H:%M")
 
