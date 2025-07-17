@@ -82,8 +82,6 @@ async def scheduler():
         print("کلاینت تلگرام متصل شد.")
         print("شروع برنامه‌ریزی...")
 
-        await copy_and_send_last_message(client)
-
         timezone = pytz.timezone(TIMEZONE)
 
         await copy_and_send_last_message(client)
