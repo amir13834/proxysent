@@ -9,7 +9,7 @@ API_ID = 9309709
 API_HASH = 'cba32691d5804bc435725c6ce0a3c27c'
 
 SOURCE_CHANNEL_ID = '@MTP_roto'
-DESTINATION_CHANNEL_ID = '@proxy1321'
+DESTINATION_CHANNEL_ID = '@AzadvpnPro'
 
 SCHEDULED_TIMES = ["00:30", "09:30", "10:30", "11:30", "12:30", "13:30", "14:30",
                    "15:30", "16:30", "17:30", "18:30", "19:30", "20:30",
